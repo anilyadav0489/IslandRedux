@@ -47,6 +47,7 @@ export var createIslandsReducer = (state = {}, action) => {
           if(island.id === action.id){
             island.isAvailable = false;
             island.isPicked = true;
+            island.readOnly = true;
           }
           return island;
         });

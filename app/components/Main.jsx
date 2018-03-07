@@ -1,6 +1,7 @@
 var React = require('react');
 var {connect} = require('react-redux');
 var islandPicker = require('islandPicker');
+var actions = require('actions');
 
 import IslandStore from 'IslandStore';
 import IslandWallet from 'IslandWallet';
@@ -9,7 +10,6 @@ import Message from 'Message';
 class Main extends React.Component {
 
   componentDidUpdate(prevProps, prevState){
-    debugger;
     if(prevProps.storeState.gameState === 'PLAYER_TO_SELECT'){
       //call AI to pick best in the remaining islands
       this.pickTheBestIsland();
@@ -55,16 +55,14 @@ class Main extends React.Component {
   pickTheBestIsland() {
     var that = this;
     var {availableIslands, leftBoundary, rightBoundary} = this.props.storeState;
-    debugger;
     islandPicker.getIsland(stringify(availableIslands)).then(function(returnedIndex) {
       var indexToConsider = returnedIndex === 0 ? leftBoundary : rightBoundary;
-      //that.props.dispatch handleIslandSelection(indexToConsider);
+      that.props.dispatch(actions.selectIsland(indexToConsider));
     }, function (errorMessage){
       alert('Error occured: '+ errorMessage);
     });
 
     function stringify(islands){
-      debugger;
       var str = '';
       islands.forEach(function(island){
         str = str + island.area + ",";

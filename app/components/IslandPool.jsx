@@ -27,9 +27,8 @@ class IslandPool extends React.Component {
                     {islands.map(function(island, index){
                       return (<li className="island-display" key={index}>
                                 <Island key={index} id={island.id} area={island.area}
-                                  mainState={that.props.mainState} readOnly={that.props.readOnly}
-                                  isPicked={island.isPicked} onIslandSelection={that.handleIslandSelection}
-                                  onSetIslandArea={that.handleSetIslandArea}></Island>
+                                  readOnly={island.readOnly}
+                                  isPicked={island.isPicked} ></Island>
                               </li>);
                       })}
                 </ul>
