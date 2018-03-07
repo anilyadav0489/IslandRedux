@@ -1,21 +1,27 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
-var Main = require('Main');
+import Main from 'Main';
+var {Provider} = require('react-redux');
+
+var store = require('configureStore').configure();
+
+store.subscribe(() => {
+  var state = store.getState();
+  console.log('New state', state);
+});
 
 // Load foundation
-require('style!css!foundation-sites/dist/foundation.min.css')
+require('style!css!foundation-sites/dist/foundation.min.css');
 $(document).foundation();
 
-require('./redux-example.jsx')
-
 // App css
-require('style!css!sass!applicationStyles')
+require('style!css!sass!applicationStyles');
+
 
 ReactDOM.render(
-  <Router history={hashHistory}>
-    <Route path="/" component={Main}>
-    </Route>
-  </Router>,
+  <Provider store={store}>
+    <Main/>
+  </Provider>,
   document.getElementById('app')
 );
