@@ -3,7 +3,7 @@ export var createIslandsReducer = (state = {}, action) => {
   switch (action.type) {
     case '@@INIT':
       return {
-        gameState: 'TOTAL_ISLANDS_TO_BE_DECIDED',
+        gameState: 'BEGIN',
         playerA: 0,
         computer: 0,
         leftBoundary: 0,
@@ -12,6 +12,9 @@ export var createIslandsReducer = (state = {}, action) => {
         availableIslands: []
       };
 
+    case 'START_THE_GAME':
+      var gameState = 'TOTAL_ISLANDS_TO_BE_DECIDED';
+      return {...state, gameState};
 
     case 'STATE_CHANGE':
         return {...state, gameState: action.newState};

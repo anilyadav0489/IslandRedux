@@ -78,6 +78,7 @@ Island.defaultProps = {
   readOnly: false,
   isPicked: false
 };
+
 export default connect(
   (state) => {
     return state;

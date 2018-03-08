@@ -35,3 +35,9 @@ export var stateChange = (newState) => {
     newState
   };
 };
+
+export var startTheGame = () => {
+  return {
+    type: 'START_THE_GAME',
+  };
+};

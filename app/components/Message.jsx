@@ -16,7 +16,7 @@ class Message extends React.Component {
         case 'ENTER_ISLANDS_AREA':
           return <StartGame/>;
         case 'PLAYER_TO_SELECT':
-          return <h3>Player A to select</h3>;
+          return <h3>Your chance to select</h3>;
         case 'COMPUTER_TO_SELECT':
           return <h3>Computer is selecting...</h3>;
         case 'GAME_OVER':

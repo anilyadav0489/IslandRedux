@@ -9,7 +9,7 @@ class IslandStore extends React.Component {
     return (
       <div>
         <IslandCountSetter/>
-          <IslandPool/>
+        <IslandPool/>
       </div>
     );
   }
