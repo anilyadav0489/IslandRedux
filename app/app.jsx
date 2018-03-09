@@ -1,9 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var {Provider} = require('react-redux');
-var {connect} = require('react-redux');
 import { Router, Route, browserHistory } from 'react-router';
-import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 
 import Main from 'Main';
 import About from 'About';
@@ -14,7 +12,6 @@ store.subscribe(() => {
   var state = store.getState();
   console.log('New state', state);
 });
-
 // Load foundation
 require('style!css!foundation-sites/dist/foundation.min.css');
 $(document).foundation();
