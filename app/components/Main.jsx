@@ -24,11 +24,12 @@ class Main extends React.Component {
     var gameState = this.props.storeState.gameState;
     function startRendering (gameState) {
       if (gameState === 'BEGIN') {
-        return ( <Instructions/> );
+        return (
+                <Instructions/>
+         );
       }else{
         return (
-          <div>
-            <Nav/>
+          <div className="application-top-level">
             <div className="page-header">
               <h3 className="header-text">Pick and Play</h3>
             </div>
@@ -63,7 +64,8 @@ class Main extends React.Component {
     }
 
     return (
-      <div>
+      <div className="application-top-level">
+        <Nav/>
         {startRendering(gameState)}
       </div>
 

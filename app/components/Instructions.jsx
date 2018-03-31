@@ -19,10 +19,10 @@ class Instructions extends React.Component {
         <div className='instructions'>
           <div className="row">
             <div className="column small-centered-12 medium-12 large-12">
-              <div className="instructions-text">
+              <div className="instructions-text application-top-level">
                 {instructions}
               </div>
-              <div className="instructions-text">
+              <div className="application-top-level instructions-text">
                 Island could be picked from the either the first or the last position amongst available islands.
               </div>
             </div>
