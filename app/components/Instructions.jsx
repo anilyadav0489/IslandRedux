@@ -9,14 +9,14 @@ class Instructions extends React.Component {
   }
 
   render(){
-    var instructions = "Welcome to the 'Pick the Best' game." +
-    "\n In this game you will play against computer " +
+    var instructions = "Welcome to the 'Pick the Best' game. " +
+    "In this game you will play against computer " +
     "and one who picks larger islands will win the game. "+
     "Alternate chances will be given to you and the computer to pick an island."+
     "The only rule to be followed is:";
     return (
       <div>
-        <div className='instructions'>
+        <div className='instructions application-top-level'>
           <div className="row">
             <div className="column small-centered-12 medium-12 large-12">
               <div className="instructions-text application-top-level">

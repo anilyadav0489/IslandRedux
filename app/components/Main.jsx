@@ -29,7 +29,7 @@ class Main extends React.Component {
          );
       }else{
         return (
-          <div className="application-top-level">
+          <div>
             <div className="page-header">
               <h3 className="header-text">Pick and Play</h3>
             </div>
@@ -64,8 +64,7 @@ class Main extends React.Component {
     }
 
     return (
-      <div className="application-top-level">
-        <Nav/>
+      <div>
         {startRendering(gameState)}
       </div>
 

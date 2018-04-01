@@ -1,29 +1,34 @@
 var React = require('react');
 var {connect} = require('react-redux');
+var {Link} = require('react-router-dom');
 
 class About extends React.Component{
   render(){
     return (
-      <div>
-        <h1 className="text-center page-title">About</h1>
-        <p>
-          This is an intelligent game built on React. Here, user plays against computer to grab islands
-          with the maximum area. The only rule is, selection at any point in the game could be made
-          from either of available ends. One who grabs more area will win the game.
-        </p>
-        <p>
-          To check rules of the game click the following link:
-        </p>
-        <ul>
-          <li>
-            <a href="https://facebook.github.io/react">React</a> - This was the
-              JavaScript framework used.
-          </li>
-          <li>
-            <a href="http://openweathermap.org">Open Weather Map</a> - I used
-              Open Weather Map to search for weather data by city name.
-          </li>
-        </ul>
+      <div className='about-page application-top-level'>
+        <div className="row">
+          <div  className="column small-centered medium-10 large-12">
+            <h1 text-center page-title>About</h1>
+          </div>
+        </div>
+        <div className="row">
+          <div className="column small-centered medium-10 large-12">
+              This is an intelligent game built on React. Here, user plays against computer to grab islands
+              with the maximum area. The only rule is, selection at any point during the game play, could be made
+              from either of available ends. One who grabs more area will win the game.
+            <div className="margin">
+              <ul>
+                <li>
+                  <Link to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Resume Play</Link>
+                </li>
+                <li>
+                  <a href="https://facebook.github.io/react">React JS </a>
+                  - have been used to implement this game.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

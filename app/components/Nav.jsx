@@ -1,5 +1,5 @@
 var React = require('react');
-var {Link, IndexLink} = require('react-router');
+var {Link} = require('react-router-dom');
 var {connect} = require('react-redux');
 
 class Nav extends React.Component{
@@ -11,7 +11,7 @@ class Nav extends React.Component{
           <ul className="menu ">
             <li className="menu-text">Pick The Best App</li>
             <li>
-              <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Home</IndexLink>
+              <Link to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Home</Link>
             </li>
             <li>
               <Link to="/about" activeClassName="active"  activeStyle={{fontWeight: 'bold'}}>About</Link>

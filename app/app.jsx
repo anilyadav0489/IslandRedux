@@ -1,10 +1,9 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var {Provider} = require('react-redux');
-import { Router, Route, browserHistory } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
 
-import Main from 'Main';
-import About from 'About';
+import Application from 'Application';
 
 var store = require('configureStore').configure();
 
@@ -22,11 +21,9 @@ require('style!css!sass!applicationStyles');
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={browserHistory}>
-      <Route path="/" component={Main}>
-        <Route path="/about" component={About}/>
-      </Route>
-    </Router>
+    <BrowserRouter>
+      <Application/>
+    </BrowserRouter>
   </Provider>,
   document.getElementById('app')
 );
