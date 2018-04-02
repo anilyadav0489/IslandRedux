@@ -1,7 +1,8 @@
 
 export var createIslandsReducer = (state = {}, action) => {
+  debugger;
   switch (action.type) {
-    case '@@INIT':
+    case '@@redux/INIT':
       return {
         gameState: 'BEGIN',
         playerA: 0,
