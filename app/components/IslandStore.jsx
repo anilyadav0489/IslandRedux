@@ -5,6 +5,10 @@ import IslandCountSetter from 'IslandCountSetter';
 import IslandPool from 'IslandPool';
 
 class IslandStore extends React.Component {
+  constructor(props){
+      super(props);
+  }
+  
   render(){
     return (
       <div>

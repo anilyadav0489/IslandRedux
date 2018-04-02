@@ -5,9 +5,16 @@ import Island from 'Island';
 
 class IslandPool extends React.Component {
 
+  constructor(props){
+      super(props);
+  }
+
   render(){
     var that = this;
-    var numberOfIslands = this.props.storeState.islands.length;
+    console.log('setting number of islands now');
+    debugger;
+    var numberOfIslands = this.props.storeState.islands ? this.props.storeState.islands.length: 0;
+    console.log('zzz'+ numberOfIslands);
     var islands = this.props.storeState.islands;
 
     function renderPool () {

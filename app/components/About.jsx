@@ -3,6 +3,10 @@ var {connect} = require('react-redux');
 var {Link} = require('react-router-dom');
 
 class About extends React.Component{
+  constructor(props){
+      super(props);
+  }
+  
   render(){
     return (
       <div className='about-page application-top-level'>

@@ -4,6 +4,10 @@ var {connect} = require('react-redux');
 var actions = require('actions');
 
 class Instructions extends React.Component {
+  constructor(props){
+      super(props);
+  }
+  
   startTheGame(){
     this.props.dispatch(actions.startTheGame());
   }

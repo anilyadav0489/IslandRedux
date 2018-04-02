@@ -3,7 +3,9 @@ var {connect} = require('react-redux');
 import StartGame from 'StartGame';
 
 class Message extends React.Component {
-
+  constructor(props){
+      super(props);
+  }
 
   render(){
     var that = this;

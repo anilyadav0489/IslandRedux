@@ -1,4 +1,5 @@
 import React from 'react'
+var {connect} = require('react-redux');
 import { Switch, Route} from 'react-router-dom';
 
 import Nav from 'Nav'
@@ -15,4 +16,9 @@ const Application = () => (
   </div>
 )
 
-export default Application;
+
+export default connect(
+  (state) => {
+    return state;
+  }
+)(Application);

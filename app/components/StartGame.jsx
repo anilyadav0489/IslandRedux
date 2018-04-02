@@ -3,6 +3,10 @@ var {connect} = require('react-redux');
 var actions = require('actions');
 
 class StartGame extends React.Component {
+  constructor(props){
+      super(props);
+  }
+
   startGame (e) {
     e.preventDefault();
     this.props.dispatch(actions.stateChange('PLAYER_TO_SELECT'));

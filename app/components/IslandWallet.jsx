@@ -2,6 +2,10 @@ var React = require('react');
 var {connect} = require('react-redux');
 
 class IslandWallet extends React.Component {
+  constructor(props){
+      super(props);
+  }
+
   render() {
     var header = this.props.header;
     var islandAcquired = header === 'Your Bucket'? this.props.storeState.playerA: this.props.storeState.computer;

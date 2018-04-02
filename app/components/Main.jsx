@@ -12,6 +12,9 @@ import ErrorModal from 'ErrorModal';
 import Instructions from 'Instructions';
 
 class Main extends React.Component {
+  constructor(props){
+      super(props);
+  }
 
   componentDidUpdate(prevProps, prevState){
     if(prevProps.storeState.gameState === 'PLAYER_TO_SELECT'){
@@ -20,7 +23,9 @@ class Main extends React.Component {
     }
   }
 
+
   render() {
+    debugger
     var gameState = this.props.storeState.gameState;
     function startRendering (gameState) {
       if (gameState === 'BEGIN') {

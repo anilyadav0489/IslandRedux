@@ -1,9 +1,13 @@
 var React = require('react');
-var {Link} = require('react-router-dom');
+var {NavLink} = require('react-router-dom');
 var {connect} = require('react-redux');
 
 class Nav extends React.Component{
 
+  constructor(props){
+      super(props);
+  }
+  
   render() {
     return (
       <div className="top-bar">
@@ -11,10 +15,10 @@ class Nav extends React.Component{
           <ul className="menu ">
             <li className="menu-text">Pick The Best App</li>
             <li>
-              <Link to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Home</Link>
+              <NavLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Home</NavLink>
             </li>
             <li>
-              <Link to="/about" activeClassName="active"  activeStyle={{fontWeight: 'bold'}}>About</Link>
+              <NavLink to="/about" activeClassName="active"  activeStyle={{fontWeight: 'bold'}}>About</NavLink>
             </li>
           </ul>
         </div>
