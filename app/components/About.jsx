@@ -1,12 +1,12 @@
 var React = require('react');
 var {connect} = require('react-redux');
-var {Link} = require('react-router-dom');
+var {NavLink} = require('react-router-dom');
 
 class About extends React.Component{
   constructor(props){
       super(props);
   }
-  
+
   render(){
     return (
       <div className='about-page application-top-level'>
@@ -23,7 +23,7 @@ class About extends React.Component{
             <div className="margin">
               <ul>
                 <li>
-                  <Link to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Resume Play</Link>
+                  <NavLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Resume Play</NavLink>
                 </li>
                 <li>
                   <a href="https://facebook.github.io/react">React JS </a>

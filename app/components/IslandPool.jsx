@@ -11,11 +11,8 @@ class IslandPool extends React.Component {
 
   render(){
     var that = this;
-    console.log('setting number of islands now');
-    debugger;
-    var numberOfIslands = this.props.storeState.islands ? this.props.storeState.islands.length: 0;
-    console.log('zzz'+ numberOfIslands);
     var islands = this.props.storeState.islands;
+    var numberOfIslands = islands.length;
 
     function renderPool () {
       if(numberOfIslands === 0){

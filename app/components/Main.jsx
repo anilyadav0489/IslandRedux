@@ -25,7 +25,7 @@ class Main extends React.Component {
 
 
   render() {
-    debugger
+    debugger;
     var gameState = this.props.storeState.gameState;
     function startRendering (gameState) {
       if (gameState === 'BEGIN') {
